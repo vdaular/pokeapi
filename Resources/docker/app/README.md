@@ -17,7 +17,7 @@
 - [`master`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
 - [`staging`](https://github.com/PokeAPI/pokeapi/blob/staging/Resources/docker/app/Dockerfile)
 
-> `pokeapi` uses `python:3.10-alpine` as base image.
+> `pokeapi` uses `python:3.12.8-alpine3.21` as base image.
 
 ## What is PokeAPI?
 
@@ -35,7 +35,7 @@ The container connects to a Redis cache via the environment variable `REDIS_CONN
 
 ### Run the container
 
-The container exposes port `80`. It needs a PostgreSQL and a Redis instance to connect to. Refer to the section [How to use this image](./how-to-use-this-image) for mapping the environment variables.
+The container exposes port `80`. It needs a PostgreSQL and a Redis instance to connect to. Refer to the section [How to use this image](#how-to-use-this-image) for mapping the environment variables.
 
 It's recommended to use the provided [docker-compose.yml](https://github.com/PokeAPI/pokeapi/blob/master/docker-compose.yml) to start a container from this image.
 

@@ -18,10 +18,13 @@ graphql
 .vscode
 .github
 .circleci
-docker-compose.yml
+docker-compose*
 .dockerignore
 /*.md
 /*.js
 .env
 *pycache*
 target
+data/v2/cries
+data/v2/csv
+data/v2/sprites

@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: cimg/python:3.10.9
+      - image: cimg/python:3.12.8
     steps:
       - checkout
       - run:
@@ -20,9 +20,12 @@ jobs:
       - run:
           name: Run tests
           command: make test
+      - run:
+          name: Generate OpenAPI schema
+          command: make openapi-generate
   build:
     docker:
-      - image: cimg/python:3.10.9
+      - image: cimg/python:3.12.8
     steps:
       - checkout
       - run:
@@ -41,7 +44,7 @@ jobs:
           command: make build-db
   deploy:
     machine:
-      image: ubuntu-2204:2023.10.1
+      image: ubuntu-2204:2024.11.1
     resource_class: large
     steps:
       - checkout
